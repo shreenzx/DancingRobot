@@ -1,0 +1,228 @@
+
+.main{
+    border: 3px solid black;
+    height: 500px;
+    margin-top: 100px;
+    background: black;
+}
+h1{
+    color:antiquewhite;
+}
+
+
+.face{
+    background: chartreuse;
+    height: 150px;
+    width: 150px;
+    border-radius: 50% 50% 0 0;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+.eyes{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+
+
+.leye,.reye{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: black;
+}
+
+
+.body1{
+    display: flex;
+    justify-content: space-evenly;
+    width: 250px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+.larm{
+    height: 75px;
+    width: 25px;
+    background: chartreuse;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+
+.center{
+    height: 150px;
+    width: 150px;
+    background: chartreuse;
+    border-radius: 0 0 40% 40%;
+}
+
+
+.rarm{
+    height: 75px;
+    width: 25px;
+    background: chartreuse;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+
+.legs{
+    display: flex;
+    justify-content: space-evenly;
+    width: 150px;
+    margin: auto;
+    margin-top: -20px;  
+}
+
+
+.lleg{
+    height: 75px;
+    width: 25px;
+    background: chartreuse;
+    border-radius: 50px;
+}
+
+
+.rleg{
+    height: 75px;
+    width: 25px;
+    background: chartreuse;
+    border-radius: 50px;
+}
+.main:hover .face{
+    border-radius: 50%;
+    animation: moveface 1s 0.1s infinite;
+    margin-bottom: 20px;
+
+}
+@keyframes moveface {
+    0%{
+        transform:translatey(0);
+    }
+    50%{
+        transform:translatey(20px);
+    }
+    
+    100%{
+        transform:translate(0);
+    }
+    
+}
+.main:hover .center{
+    transform: rotate(180deg);
+    border-radius: 50%;
+    animation: movebody 0.1s 0.1s infinite;
+
+}
+@keyframes movebody {
+    
+    0%{
+        transform:rotate(100deg);
+        transform: translateX(5px);
+        
+    }
+    25%{
+        transform:rotate(105deg);
+        transform: translateX(5px);
+    }
+    50%{
+        transform:rotate(-110deg);
+        transform: translateX(-8px);
+        
+    }
+    75%{
+        transform:rotate(-110deg);
+        transform: translateX(-10px);
+    }
+    100%{
+        transform:rotate(100 deg);
+        transform: translateX(5px);
+        
+    }
+    
+    
+}
+.main:hover .larm{
+    transform:rotate(0deg);
+    animation: movearms 1s 0.1s infinite;
+
+}
+@keyframes movearms {
+    
+    0%{
+        transform:rotate(20deg);
+       
+        
+    }
+    25%{
+        transform:rotate(25deg);
+        
+    }
+    50%{
+        transform:rotate(-25deg);
+       
+        
+    }
+    75%{
+        transform:rotate(-20deg);
+        
+    }
+    100%{
+        transform:rotate(20deg);
+        
+        
+    }
+    
+    
+}
+.main:hover .rarm{
+    transform:rotate(0deg);
+    animation: movearms 1s 0.1s infinite;
+
+}
+.main:hover .rleg{
+    transform:translatey(20px);
+    animation:movelegs 1s 0.2s infinite;
+}
+.main:hover .lleg{
+    transform:translatey(20px);
+    animation:movelegs 1s 0.2s infinite;
+}
+@keyframes movelegs {
+    
+    0%{
+        transform:translatey(5px);
+       
+        
+    }
+    50%{
+        transform:translatey(-45px);
+       
+        
+    }
+    100%{
+        transform:translatey(5px);
+        
+        
+    }
+    
+    
+}
+.main:hover .eyes{
+    transform: translatey(-40px);
+}
+.main:hover{
+    animation: bg 1s 0.1s infinite;
+}
+@keyframes bg{
+    0%{background: white;}
+    25%{background: blue;}
+    50%{background: purple;}
+    75%{background: red;}
+    100%{background: black;}
+}
+
